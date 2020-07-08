@@ -17,4 +17,7 @@ interface BurgerDao {
 
     @Query("DELETE FROM burgers")
     fun deleteAllBurgers()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert (burgerVO: BurgerVO)
 }
