@@ -4,6 +4,8 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.transition.Fade
 import android.view.View
@@ -23,6 +25,12 @@ import com.zg.burgerjoint.mvp.views.MainView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), MainView {
+
+    companion object {
+        fun newIntent(context: Context): Intent {
+            return Intent(context, MainActivity::class.java)
+        }
+    }
 
     private lateinit var mBurgerAdapter: BurgerAdapter
     private lateinit var mPresenter: MainPresenter
