@@ -30,7 +30,7 @@ class GoToBurgerDetailsTest {
         onView(withId(R.id.rvBurgerList))
             .perform(RecyclerViewActions.actionOnItemAtPosition<BurgerViewHolder>(0, click()))
 
-        onView(withId(R.id.tvDescription))
+        onView(withId(R.id.tvBurgerName))
             .check(matches(isDisplayed()))
     }
 }
